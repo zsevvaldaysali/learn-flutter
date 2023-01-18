@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class colorDemos extends StatefulWidget {
   const colorDemos({Key? key, required this.initialColor}) : super(key: key);
 
-  final Color? initialColor;
+  final Color? initialColor; //ekran açıldığında göreceğimiz ilk color
   @override
   State<colorDemos> createState() => _colorDemosState();
 }

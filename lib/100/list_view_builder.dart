@@ -14,7 +14,8 @@ class _ListViewBuilderState extends State<ListViewBuilder> {
         appBar: AppBar(),
         body: ListView.separated(
           separatorBuilder: (context, index) {
-            return const Divider();
+            return const Divider(
+            color: Colors.white);
           },
           itemBuilder: (BuildContext context, int index) {
             print(index);

@@ -12,10 +12,12 @@ class imageLearn extends StatelessWidget {
             width: 50,
             child: jpgImage(pathName: ImageItems().appleBookWithoutPath)),
         pngImage(pngPathName: ImageItems().pngBaloonsWithoutPath),
-        Image.network(
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apple-book.svg/763px-Apple-book.svg.png",
-          errorBuilder: (context, error, stackTrace) =>
-              Icon(Icons.abc_outlined),
+        Expanded(
+          child: Image.network(
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apple-book.svg/763px-Apple-book.svg.png",
+            errorBuilder: (context, error, stackTrace) =>
+                Icon(Icons.abc_outlined),
+          ),
         ), //image gelmediğinde orası boş duracağına errorBuildera Icon atayarak
         //en azından ikon gözükmesini sağlayıp hata olduğunu anlayabiliriz ve daha ileri seviye bi iş yapmış oluruz
       ]),
